@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "sienna_grabber"
-version = "0.1.0"
+name = "toyota_grabber"
+version = "0.1.1"
 description = ""
-authors = ["Ianko Leite"]
+authors = ["Ianko Leite", "Terrence Hung"]
 readme = "README.md"
-packages = [{ include = "sienna_grabber", from = "src" }]
+packages = [{ include = "toyota_grabber", from = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.11.5,<3.13"
@@ -28,5 +28,5 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-update_vehicles = 'sienna_grabber.vehicles:update_vehicles'
-upload_output = 'sienna_grabber.vehicles:upload_output'
+update_vehicles = 'toyota_grabber.vehicles:update_vehicles'
+upload_output = 'toyota_grabber.vehicles:upload_output'

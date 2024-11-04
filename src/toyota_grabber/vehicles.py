@@ -11,7 +11,7 @@ import pandas as pd
 import requests
 import warnings
 
-from sienna_grabber import config, wafbypass
+from toyota_grabber import config, wafbypass
 
 # Get the model that we should be searching for.
 MODEL = os.environ.get("MODEL")
@@ -136,7 +136,7 @@ def update_vehicles():
     """Generate a curated database of vehicles."""
     if not MODEL:
         sys.exit("Set the MODEL environment variable first")
-    
+
     if not ZIPCODE:
         sys.exit("Set the ZIPCODE environment variable first")
 
@@ -162,9 +162,9 @@ def sync_data_to_api(df):
     headers = {'Content-Type': 'application/json'}
 
     # Send the POST request to the remote URL
-    response = requests.post("http://localhost:4000/gha/sync", 
-        data=json_data, 
-        headers=headers, 
+    response = requests.post("http://localhost:4000/gha/sync",
+        data=json_data,
+        headers=headers,
         timeout=15
     )
 
